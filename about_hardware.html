@@ -54,8 +54,6 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
-    })
-    .then(() => {
       // Re-run the script after navbar loads
       const script = document.createElement('script');
       script.src = 'script.js';
