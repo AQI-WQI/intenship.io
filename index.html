@@ -2,63 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agile Achievers – Home</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Agile Achievers</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar Include -->
-  <div id="navbar-container"></div>
-
-  <!-- Hero Section -->
-  <section class="container">
-    <h1 class="page-title">Welcome to Agile Achievers</h1>
-    <p class="subtitle">Smart Environmental Monitoring for a Sustainable Future</p>
-  </section>
-
-  <!-- Problem Statement -->
-  <section class="container card">
-    <h3>🌍 Problem Statement</h3>
-    <p>
-      Environmental pollution and poor water quality pose serious health and sustainability risks. 
-      Existing systems lack real-time monitoring and community-level awareness.
-    </p>
-  </section>
-
-  <!-- Our Solution -->
-  <section class="container card">
-    <h3>💡 Our Solution</h3>
-    <p>
-      We've built an IoT-based environmental monitoring system that provides real-time data on air and water quality. 
-      It uses sensors and ThingSpeak dashboards to visualize temperature, humidity, gas levels, and turbidity.
-    </p>
-  </section>
-
-  <!-- Unique Features -->
-  <section class="container card">
-    <h3>🚀 What Makes It Unique</h3>
+  <!-- Navbar -->
+  <div class="navbar">
     <ul>
-      <li>⚡ Real-time data tracking via ThingSpeak</li>
-      <li>🌐 Web-based interface for public awareness</li>
-      <li>📊 Clean dashboards for actionable insights</li>
-      <li>🔗 Low-cost and easily deployable model</li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">About</a>
+        <div class="dropdown-content" id="dropdownContent">
+          <a href="about_hardware.html">Hardware</a>
+          <a href="about_software.html">Software</a>
+        </div>
+      </li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="thingspeak.html">ThingSpeak</a></li>
+      <li><a href="water_analysis.html">Water Analysis</a></li>
     </ul>
-  </section>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1 class="page-title">Agile Achievers</h1>
+    <p class="subtitle">Smart Water Quality Monitoring System</p>
+
+    <div class="card">
+      <h3>🚨 Problem Statement</h3>
+      <p>
+        In many regions, the quality of water is declining due to pollution, chemicals, and lack of monitoring.
+        Manual testing is time-consuming, costly, and not always available in remote or rural areas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💡 Our Solution</h3>
+      <p>
+        We’ve developed a smart IoT-based system that continuously monitors water parameters like pH, turbidity,
+        temperature, and TDS using sensors. Data is uploaded live to ThingSpeak and accessible from anywhere.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌟 What Makes It Unique</h3>
+      <p>
+        Our project combines real-time cloud monitoring, low-cost hardware, and a user-friendly interface.
+        It’s scalable, energy-efficient, and designed for remote areas and smart city infrastructure.
+      </p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Agile Achievers – All rights reserved</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- JS Script -->
   <script>
-    // Load the navbar
-    fetch("components/navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar-container").innerHTML = data;
-      });
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownContent');
+      dropdown.classList.toggle('show');
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    };
   </script>
+
 </body>
 </html>
