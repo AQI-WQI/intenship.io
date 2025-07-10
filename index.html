@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agile Achievers – Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar Include -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero Section -->
+  <section class="container">
+    <h1 class="page-title">Welcome to Agile Achievers</h1>
+    <p class="subtitle">Smart Environmental Monitoring for a Sustainable Future</p>
+  </section>
+
+  <!-- Problem Statement -->
+  <section class="container card">
+    <h3>🌍 Problem Statement</h3>
+    <p>
+      Environmental pollution and poor water quality pose serious health and sustainability risks. 
+      Existing systems lack real-time monitoring and community-level awareness.
+    </p>
+  </section>
+
+  <!-- Our Solution -->
+  <section class="container card">
+    <h3>💡 Our Solution</h3>
+    <p>
+      We've built an IoT-based environmental monitoring system that provides real-time data on air and water quality. 
+      It uses sensors and ThingSpeak dashboards to visualize temperature, humidity, gas levels, and turbidity.
+    </p>
+  </section>
+
+  <!-- Unique Features -->
+  <section class="container card">
+    <h3>🚀 What Makes It Unique</h3>
+    <ul>
+      <li>⚡ Real-time data tracking via ThingSpeak</li>
+      <li>🌐 Web-based interface for public awareness</li>
+      <li>📊 Clean dashboards for actionable insights</li>
+      <li>🔗 Low-cost and easily deployable model</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Agile Achievers – All rights reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Load the navbar
+    fetch("components/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
