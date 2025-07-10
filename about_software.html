@@ -41,14 +41,18 @@
     <p>© 2025 Environment Monitoring Team</p>
   </footer>
 
-  <!-- Load navbar dynamically -->
   <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-      });
-  </script>
-  <script src="script.js"></script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .then(() => {
+      // Re-run the script after navbar loads
+      const script = document.createElement('script');
+      script.src = 'script.js';
+      document.body.appendChild(script);
+    });
+</script>>
 </body>
 </html>
