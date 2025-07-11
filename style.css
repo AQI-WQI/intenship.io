@@ -48,7 +48,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #1f1f7a; /* Same as navbar */
+  background-color: #1f1f7a; /* Match navbar */
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 10;
@@ -101,6 +101,11 @@ body {
   margin-bottom: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
@@ -115,6 +120,16 @@ body {
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
+}
+
+.card img {
+  display: block;
+  margin: 20px auto 0;
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
