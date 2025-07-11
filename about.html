@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About - Agile Achievers</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -64,18 +64,7 @@
   <footer>
     © 2025 Agile Achievers – All rights reserved
   </footer>
-
-  <!-- Navbar Script -->
-  <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-        const script = document.createElement('script');
-        script.src = 'script.js';
-        document.body.appendChild(script);
-      });
-  </script>
+<script src="script.js"></script>
 
 </body>
 </html>
