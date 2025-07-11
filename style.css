@@ -16,60 +16,28 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .navbar li {
-  float: left;
-  position: relative;
+  margin: 0;
 }
 
-.navbar li a,
-.dropbtn {
+.navbar li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 18px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .navbar li a:hover,
-.navbar li a.active,
-.navbar .dropdown:hover .dropbtn {
+.navbar li a.active {
   background-color: #4a4aff;
-}
-
-/* Dropdown Styles */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #1f1f7a; /* Match navbar */
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  border-radius: 8px;
-  top: 100%;
-  left: 0;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 10px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #4a4aff;
-}
-
-.show {
-  display: block;
+  border-radius: 4px;
 }
 
 /* CONTAINER */
@@ -126,10 +94,10 @@ body {
   display: block;
   margin: 20px auto 0;
   max-width: 100%;
-  max-height: 200px;
+  max-height: 220px; /* Slightly increased */
   object-fit: contain;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* FOOTER */
@@ -142,7 +110,7 @@ footer {
   margin-top: 50px;
 }
 
-/* RESPONSIVE IFRAME (for ThingSpeak, etc.) */
+/* RESPONSIVE IFRAME */
 iframe {
   display: block;
   margin: 0 auto;
@@ -154,7 +122,7 @@ iframe {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* TEAM CARD (for team.html) */
+/* TEAM CARD */
 .team-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
