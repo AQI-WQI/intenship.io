@@ -16,13 +16,11 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
 }
 
 .navbar li {
-  margin: 0;
+  float: left;
+  position: relative;
 }
 
 .navbar li a {
