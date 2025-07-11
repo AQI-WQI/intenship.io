@@ -77,6 +77,12 @@
   <footer>
     <p>© 2025 Agile Achievers – All rights reserved</p>
   </footer>
-
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar-container').innerHTML = data;
+    });
+</script>
 </body>
 </html>
