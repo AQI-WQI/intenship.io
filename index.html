@@ -36,17 +36,11 @@
   <footer>
     © 2025 Agile Achievers – All rights reserved
   </footer>
-
-<script src="script.js" defer></script>
-  <script>
+<script>
   fetch('navbar.html')
-    .then(response => response.text())
+    .then(res => res.text())
     .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-      // Re-run the script after navbar loads
-      const script = document.createElement('script');
-      script.src = 'script.js';
-      document.body.appendChild(script);
+      document.getElementById('navbar-container').innerHTML = data;
     });
 </script>
 
