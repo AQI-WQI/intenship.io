@@ -3,86 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About – Hardware & Software Used</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>About - Agile Achievers</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
-  <div id="navbar-container"></div>
+  <div id="navbar-placeholder"></div>
 
-  <!-- Main Content -->
   <div class="container">
     <h1 class="page-title">About the Project</h1>
-    <p class="subtitle">Hardware and Software Used in Our Monitoring System</p>
+    <p class="subtitle">Technologies and Components Used</p>
 
     <!-- Hardware Section -->
-    <h2 class="page-title">Hardware Used</h2>
-
     <div class="card">
-      <h3>DHT11</h3>
-      <p>Measures temperature and humidity.</p>
-      <img src="assets/dht11.jpg" alt="DHT11 Sensor" class="hardware-img">
+      <h3>Arduino UNO</h3>
+      <p>Microcontroller used for processing sensor inputs and sending data via ESP8266.</p>
+      <img src="assets/images/arduino.jpg" alt="Arduino UNO">
     </div>
 
     <div class="card">
-      <h3>MQ135</h3>
-      <p>Detects harmful gases like CO2, NH3, and Benzene.</p>
-      <img src="assets/mq135.jpg" alt="MQ135 Sensor" class="hardware-img">
+      <h3>ESP8266 WiFi Module</h3>
+      <p>Used to transmit sensor data to the ThingSpeak cloud platform.</p>
+      <img src="assets/images/esp8266.jpg" alt="ESP8266 Module">
+    </div>
+
+    <div class="card">
+      <h3>DHT11 Sensor</h3>
+      <p>Measures temperature and humidity of the environment.</p>
+      <img src="assets/images/dht11.jpg" alt="DHT11 Sensor">
+    </div>
+
+    <div class="card">
+      <h3>MQ135 Gas Sensor</h3>
+      <p>Detects harmful gases like CO2, NH3, Benzene, etc., in the air.</p>
+      <img src="assets/images/mq135.jpg" alt="MQ135 Sensor">
     </div>
 
     <div class="card">
       <h3>Turbidity Sensor</h3>
-      <p>Monitors water clarity or quality.</p>
-      <img src="assets/turbidity.jpg" alt="Turbidity Sensor" class="hardware-img">
-    </div>
-
-    <div class="card">
-      <h3>ESP8266</h3>
-      <p>Wi-Fi module that transmits sensor data to the cloud.</p>
-      <img src="assets/esp8266.jpg" alt="ESP8266 Module" class="hardware-img">
-    </div>
-
-    <div class="card">
-      <h3>Arduino Uno</h3>
-      <p>Microcontroller board for controlling and reading sensors.</p>
-      <img src="assets/arduino.jpg" alt="Arduino Uno" class="hardware-img">
+      <p>Measures the cloudiness of water, indicating water quality.</p>
+      <img src="assets/images/turbidity.jpg" alt="Turbidity Sensor">
     </div>
 
     <!-- Software Section -->
-    <h2 class="page-title">Software Used</h2>
-
     <div class="card">
       <h3>Arduino IDE</h3>
-      <p>Used to write and upload code to Arduino and ESP8266.</p>
+      <p>Used for writing and uploading code to the Arduino board.</p>
+      <img src="assets/images/arduino_ide.png" alt="Arduino IDE">
     </div>
 
     <div class="card">
       <h3>ThingSpeak</h3>
-      <p>Cloud platform for visualizing sensor data in real-time.</p>
+      <p>Cloud platform for visualizing and analyzing live sensor data.</p>
+      <img src="assets/images/thingspeak.png" alt="ThingSpeak Dashboard">
     </div>
 
-    <div class="card">
-      <h3>Visual Studio Code (VS Code)</h3>
-      <p>Used to build and edit the frontend of the website.</p>
-    </div>
-
-    <div class="card">
-      <h3>GitHub</h3>
-      <p>Used for version control and hosting the live website.</p>
-    </div>
   </div>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Agile Achievers – All rights reserved</p>
+    © 2025 Agile Achievers – All rights reserved
   </footer>
-<script>
-  fetch('navbar.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('navbar-container').innerHTML = data;
-    });
-</script>
+
+  <!-- Navbar Script -->
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'script.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
 </body>
 </html>
